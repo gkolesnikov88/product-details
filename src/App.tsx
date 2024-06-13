@@ -21,8 +21,12 @@ function App() {
 
   return (
     <div className="App">
-      {!productData && <div className="loading-message">...Loading</div>}
-      {productData && <ProductDetails productData={productData} />}
+      <div className="page-wrapper">
+        <div className="content-wrapper">
+          {!productData && <div className="loading-message">...Loading</div>}
+          {productData && <ProductDetails productData={productData} />}
+        </div>
+      </div>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

@@ -10,5 +10,9 @@ export const ProductDetails = ({
 }: ProductDetailsProps) => {
   console.log(productData);
 
-  return <div>ProductDetails</div>;
+  return <>
+    <section >
+        ProductDetails
+    </section>
+  </>;
 };
