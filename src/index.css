@@ -16,4 +16,7 @@ body {
 
 :root {
   --text-primary-color: #171717;
+  --text-secondary-color: #525252;
+  --text-disabled-color: #A3A3A3;
+  --text-warning-color: #B45309;
 }
