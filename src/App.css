@@ -1,3 +1,9 @@
+.text-5xl {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 48px;
+}
+
 .page-wrapper {
   /* Linear Page */
   background: linear-gradient(147.52deg, #F9FAFB 8.89%, #D2D6DB 100.48%);

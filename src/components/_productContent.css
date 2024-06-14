@@ -1,0 +1,11 @@
+.product__content {
+    grid-column: span 6 / span 6;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.product__name {
+    color: var(--text-primary-color);
+    margin-bottom: -12px;
+}

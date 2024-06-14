@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./_productDetails.css";
+import "./_productContent.css";
 import { ProductDetailsType } from "./ProductTypes";
 
 type ProductDetailsProps = {
@@ -8,13 +9,14 @@ type ProductDetailsProps = {
 
 type ImagesPropsTypes = {
   productData: ProductDetailsType;
-  currentImage: number
+  currentImage: number;
+};
+
+type ProductContentPropTypes = {
+  productData: ProductDetailsType
 }
 
-const Images = ({
-  productData, currentImage
-} : ImagesPropsTypes) => {
-  
+const Images = ({ productData, currentImage }: ImagesPropsTypes) => {
   return (
     <div className="images__wrapper">
       <div className="current-image__wrapper">
@@ -47,6 +49,22 @@ const Images = ({
   );
 };
 
+const ProductContent = ({productData} : ProductContentPropTypes) => {
+  return (
+    <div className="product__content">
+      <h1 className="product__name text-5xl">{productData.name}</h1>
+      <div>PriceComponent</div>
+      <div>RateComponent</div>
+      <p>Description</p>
+      <div>AvailableColorsComponent</div>
+      <div>AvailableColorsSizesComponent</div>
+      <div>QuantityComponent</div>
+      <button >Add to Cart</button>
+      <div>ProductInfoComponent</div>
+    </div>
+  );
+};
+
 export const ProductDetails = ({ productData }: ProductDetailsProps) => {
   console.log(productData);
   const [currentImage, setCurrentImage] = useState(
@@ -56,9 +74,9 @@ export const ProductDetails = ({ productData }: ProductDetailsProps) => {
   return (
     <>
       <section className="product-details">
-        <Images 
+        <Images productData={productData} currentImage={currentImage} />
+        <ProductContent 
           productData={productData}
-          currentImage={currentImage}
         />
       </section>
     </>
