@@ -2,7 +2,7 @@
   /* Linear Page */
   background: linear-gradient(147.52deg, #F9FAFB 8.89%, #D2D6DB 100.48%);
 
-  min-width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
 
   padding: 16px;
