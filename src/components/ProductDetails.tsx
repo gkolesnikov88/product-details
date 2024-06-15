@@ -16,7 +16,7 @@ type ProductContentPropTypes = {
 
 const ProductContent = ({ productData }: ProductContentPropTypes) => {
   return (
-    <div className="product__content">
+    <div className="product__content product">
       <h1 className="product__name text-5xl">{productData.name}</h1>
       <PriceInfo 
         discount_percentage = {20}
@@ -27,8 +27,7 @@ const ProductContent = ({ productData }: ProductContentPropTypes) => {
         rating={4.06}
         reviews={62}
       />
-      <div>RateComponent</div>
-      <p>Description</p>
+      <p className="product__description text-base">{productData.description}</p>
       <div>AvailableColorsComponent</div>
       <div>AvailableColorsSizesComponent</div>
       <div>QuantityComponent</div>
