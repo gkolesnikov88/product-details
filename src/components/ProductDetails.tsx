@@ -5,6 +5,7 @@ import { ProductDetailsType } from "./ProductTypes";
 import { PriceInfo } from "./PriceInfo";
 import { Images } from "./Images";
 import Rating from "./Rating";
+import AvailableColors from "./AvailableColors";
 
 type ProductDetailsProps = {
   productData: ProductDetailsType;
@@ -28,7 +29,9 @@ const ProductContent = ({ productData }: ProductContentPropTypes) => {
         reviews={62}
       />
       <p className="product__description text-base">{productData.description}</p>
-      <div>AvailableColorsComponent</div>
+      <AvailableColors 
+        colors={productData.colors}
+      />
       <div>AvailableColorsSizesComponent</div>
       <div>QuantityComponent</div>
       <button>Add to Cart</button>
@@ -38,7 +41,6 @@ const ProductContent = ({ productData }: ProductContentPropTypes) => {
 };
 
 export const ProductDetails = ({ productData }: ProductDetailsProps) => {
-  // console.log(productData);
   const [currentImage, setCurrentImage] = useState(
     productData.images?.length ? 0 : -1
   );

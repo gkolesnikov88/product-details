@@ -1,0 +1,22 @@
+.available-colors__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.available-colors__text {
+    color: var(--text-tertiary-color);
+}
+
+.available-colors__color-circles {
+    display: flex;
+    padding: 2px;
+    gap: 25px;
+}
+
+.available-colors__color-circles svg {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+}
