@@ -4,6 +4,7 @@ import "./_productContent.css";
 import { ProductDetailsType } from "./ProductTypes";
 import { PriceInfo } from "./PriceInfo";
 import { Images } from "./Images";
+import Rating from "./Rating";
 
 type ProductDetailsProps = {
   productData: ProductDetailsType;
@@ -22,6 +23,10 @@ const ProductContent = ({ productData }: ProductContentPropTypes) => {
         list_price = {95}
         sale_price = {76}
       />
+      <Rating 
+        rating={4.06}
+        reviews={62}
+      />
       <div>RateComponent</div>
       <p>Description</p>
       <div>AvailableColorsComponent</div>
@@ -34,7 +39,7 @@ const ProductContent = ({ productData }: ProductContentPropTypes) => {
 };
 
 export const ProductDetails = ({ productData }: ProductDetailsProps) => {
-  console.log(productData);
+  // console.log(productData);
   const [currentImage, setCurrentImage] = useState(
     productData.images?.length ? 0 : -1
   );

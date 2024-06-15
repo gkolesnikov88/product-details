@@ -1,0 +1,22 @@
+.rating__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.rating__number {    
+    color: var(--text-primary-color);
+}
+
+.rating__stars svg{
+    /* Icon/warning */
+    fill: #FACC15;
+}
+
+.reviews__link {
+    color: var(--text-brand-color);
+}
+
+.reviews__link a:visited {
+    color: inherit;
+}

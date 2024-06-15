@@ -17,7 +17,7 @@ export const Images = ({ productData, currentImage }: ImagesPropsTypes) => {
               ? productData.images?.[currentImage].image_url
               : ""
           }`}
-          alt="Main image"
+          alt="Main"
         />
       </div>
       <div className="thumbnails__wrapper">
@@ -30,7 +30,7 @@ export const Images = ({ productData, currentImage }: ImagesPropsTypes) => {
                   idx === 0 ? "thumbnail__image--active" : ""
                 }`}
                 src={thumbnail.image_url}
-                alt={`Thumbnail image # ${idx + 1}`}
+                alt={`Thumbnail # ${idx + 1}`}
               />
             </div>
           ))}
