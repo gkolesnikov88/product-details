@@ -8,6 +8,7 @@ import Rating from "./Rating";
 import AvailableColors from "./AvailableColors";
 import AvailableSizes from "./AvailableSizes";
 import QuantityToAdd from "./QuantityToAdd";
+import { ProductInfo } from "./ProductInfo";
 
 type ProductDetailsProps = {
   productData: ProductDetailsType;
@@ -30,7 +31,9 @@ const ProductContent = ({ productData }: ProductContentPropTypes) => {
       <AvailableSizes sizes={productData.sizes} />
       <QuantityToAdd />
       <button className="add-to-cart text-lg">Add to Cart</button>
-      <div>ProductInfoComponent</div>
+      <ProductInfo
+        info={productData.info}
+      />
     </div>
   );
 };
