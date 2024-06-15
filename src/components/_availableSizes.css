@@ -1,0 +1,24 @@
+.available-sizes__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.available-sizes__text {
+    color: var(--text-tertiary-color);
+}
+
+.available-sizes__buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.available-sizes__buttons__button {
+    padding: 12px 20px;
+    border: 1px solid #E6E6E6;    
+    border-radius: 4px;
+}
+
+.button_active {
+    border: 1px solid #4F46E5;
+}
