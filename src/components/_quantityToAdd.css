@@ -1,0 +1,31 @@
+.quantity-to-add__container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.quantity-to-add__text {
+    color: var(--text-tertiary-color);
+}
+
+.quantity-control__wrapper {
+    display: flex;
+    gap: 37px;
+
+    padding: 8px;
+
+    /* Input field, Form, Text area/background */
+    background: #FAFAFA;
+    /* Border/primary */
+    border: 1px solid #E6E6E6;
+    border-radius: 6px;
+
+    max-width: fit-content;
+
+    color: var(--text-secondary-color);
+}
+
+.control-btn {
+    border: none;
+    background: none;
+}

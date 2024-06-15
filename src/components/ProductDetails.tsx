@@ -7,6 +7,7 @@ import { Images } from "./Images";
 import Rating from "./Rating";
 import AvailableColors from "./AvailableColors";
 import AvailableSizes from "./AvailableSizes";
+import QuantityToAdd from "./QuantityToAdd";
 
 type ProductDetailsProps = {
   productData: ProductDetailsType;
@@ -27,7 +28,7 @@ const ProductContent = ({ productData }: ProductContentPropTypes) => {
       </p>
       <AvailableColors colors={productData.colors} />
       <AvailableSizes sizes={productData.sizes} />
-      <div>QuantityComponent</div>
+      <QuantityToAdd />
       <button>Add to Cart</button>
       <div>ProductInfoComponent</div>
     </div>
