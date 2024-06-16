@@ -21,3 +21,22 @@
     border-radius: 4px;
     border: none;
 }
+
+.add-to-cart[disabled] {
+    background: var(--background-disabled-color);
+    /* Text/disabled */
+    color: #A3A3A3;
+
+    pointer-events: none;
+}
+
+.add-to-cart:hover {
+    background: var(--background-brand-primary-emphasize-color);
+}
+
+.add-to-cart:focus {
+    background: var(--background-brand-primary-emphasize-color);
+    /* focus-ring/focus-band */
+    box-shadow: 0px 0px 0px 4px rgba(68, 76, 231, 0.12);
+    outline: none;
+}

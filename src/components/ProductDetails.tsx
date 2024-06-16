@@ -30,7 +30,7 @@ const ProductContent = ({ productData }: ProductContentPropTypes) => {
       <AvailableColors colors={productData.colors} />
       <AvailableSizes sizes={productData.sizes} />
       <QuantityToAdd />
-      <button className="add-to-cart text-lg">Add to Cart</button>
+      <button disabled={false} className="add-to-cart text-lg">Add to Cart</button>
       <ProductInfo
         info={productData.info}
       />

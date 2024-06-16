@@ -21,6 +21,9 @@ body {
   --text-disabled-color: #A3A3A3;
   --text-warning-color: #B45309;
   --text-brand-color: #4338CA;
+
+  --background-disabled-color: #F5F5F5;
+  --background-brand-primary-emphasize-color: #3730A3;
 }
 
 .text-sm {
