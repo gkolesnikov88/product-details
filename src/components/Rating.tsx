@@ -41,9 +41,7 @@ const Rating = ({ rating, reviews }: RatingTypes) => {
     <div className="rating__wrapper">
       <div className="rating__number text-xl">{getRoundedRating(rating)}</div>
       <div className="rating__stars">{getStarsSequence(rating)}</div>
-      <div className="reviews__link text-sm">
-        <a href="/">{getReviewsText(reviews)}</a>
-      </div>
+      <button  className="reviews__link text-sm">{getReviewsText(reviews)}</button>
     </div>
   );
 };

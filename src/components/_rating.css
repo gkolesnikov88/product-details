@@ -15,8 +15,20 @@
 
 .reviews__link {
     color: var(--text-brand-color);
+    border: none;
+    background: none;
+    border-radius: 4px;
+
+    padding: 0px 2px;
+    cursor: pointer;
 }
 
-.reviews__link a:visited {
-    color: inherit;
+.reviews__link:hover {
+    color: var(--background-brand-primary-emphasize-color);
+}
+
+.reviews__link:focus {
+    /* focus-ring/focus-band */
+    box-shadow: 0px 0px 0px 4px rgba(68, 76, 231, 0.12);
+    outline: none;
 }
