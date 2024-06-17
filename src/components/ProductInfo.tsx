@@ -16,7 +16,9 @@ const ProductInfoItem = ({ info }: ProductInfoItemTypes) => {
     <div className="product-info__container">
       <div className="product-info__header text-lg">
         {info.title}
-        <RiIndeterminateCircleLine />
+        <button className="product-info__header__toggle">
+          <RiIndeterminateCircleLine />
+        </button>        
       </div>
       <ul className="product-info__list">
         {info.description?.map(description => {

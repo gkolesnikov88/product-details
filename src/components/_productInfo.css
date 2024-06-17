@@ -28,6 +28,23 @@
     color: var(--text-disabled-color);
 }
 
+.product-info__header__toggle {
+    background: none;
+    border: none;
+}
+
+.product-info__header__toggle:focus {    
+    outline: none;
+}
+
+.product-info__header__toggle:hover svg {
+    color: var(--text-tertiary-color);
+}
+
+.product-info__header__toggle:focus svg {
+    color: var(--text-tertiary-color);
+}
+
 .product-info__list {
     padding-left: 17px;
 }
