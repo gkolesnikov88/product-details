@@ -16,25 +16,24 @@ const AvailableColors = ({ colors = [] }: AvailableColorsPropTypes) => {
       <div className="available-colors__color-circles">
         {colors &&
           colors.map((color, idx) => {
-            if (idx === 0) {
-              return (
-                <RiCheckboxCircleFill
-                  color={color}
-                  className="active-circle"
-                  style={{
-                    boxShadow: "0px 0px 0px 1px #444CE7"
-                  }}
-                />
-              );
-            }
             return (
-              <RiCheckboxBlankCircleFill
-                color={color}
-                style={{
-                  borderColor: color,
-                  backgroundColor: color,
-                }}
-              />
+              <button key={idx} className="color-circles__button">
+                {idx === 0 ? (
+                  <RiCheckboxCircleFill
+                    size={38}
+                    color={color}
+                    className="active-circle"
+                  />
+                ) : (
+                  <RiCheckboxBlankCircleFill
+                    color={color}
+                    style={{
+                      borderColor: color,
+                      backgroundColor: color
+                    }}
+                  />
+                )}
+              </button>
             );
           })}
       </div>
