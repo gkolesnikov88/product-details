@@ -29,7 +29,7 @@ const getStarsSequence = (rating: number) => {
     }
   }
 
-  return <>{stars}</>;
+  return stars;
 };
 
 const getReviewsText = (reviews: number) => {
@@ -40,7 +40,7 @@ const Rating = ({ rating, reviews }: RatingTypes) => {
   return (
     <div className="rating__wrapper">
       <div className="rating__number text-xl">{getRoundedRating(rating)}</div>
-      <div className="rating__stars">{getStarsSequence(rating)}</div>
+      <div className="rating__stars">{getStarsSequence(rating).map((el, idx) => (<div key={idx}>{el}</div>))}</div>
       <button  className="reviews__link text-sm">{getReviewsText(reviews)}</button>
     </div>
   );

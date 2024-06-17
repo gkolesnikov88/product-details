@@ -21,8 +21,8 @@ const ProductInfoItem = ({ info }: ProductInfoItemTypes) => {
         </button>        
       </div>
       <ul className="product-info__list">
-        {info.description?.map(description => {
-          return <li className="product-info__list__item text-base">{description}</li>;
+        {info.description?.map((description, idx) => {
+          return <li key={idx} className="product-info__list__item text-base">{description}</li>;
         })}
       </ul>
     </div>
@@ -32,8 +32,8 @@ const ProductInfoItem = ({ info }: ProductInfoItemTypes) => {
 export const ProductInfo = ({ info }: ProductInfoPropTypes) => {
   return (
     <div className="product-infos__container">
-      {info?.map(info => (
-        <ProductInfoItem info={info} />
+      {info?.map((info, idx) => (
+        <ProductInfoItem key={idx} info={info} />
       ))}
     </div>
   );

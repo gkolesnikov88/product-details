@@ -12,7 +12,7 @@ const AvailableSizes = ({sizes = []} : AvailableSizesPropTypes ) => {
         <div className="available-sizes__buttons">
             {
                 sizes && sizes.map((size, idx) => {
-                    return <button className={`available-sizes__buttons__button ${idx === 0 ? "button_active": ""}`}>{size}</button>
+                    return <button key={idx} className={`available-sizes__buttons__button ${idx === 0 ? "button_active": ""}`}>{size}</button>
                 })
             }
         </div>

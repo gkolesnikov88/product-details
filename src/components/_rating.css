@@ -8,6 +8,10 @@
     color: var(--text-primary-color);
 }
 
+.rating__stars {
+    display: flex;
+}
+
 .rating__stars svg{
     /* Icon/warning */
     fill: #FACC15;
