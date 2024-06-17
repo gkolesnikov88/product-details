@@ -18,6 +18,11 @@ export const Images = ({ productData, currentImage }: ImagesPropsTypes) => {
               : ""
           }`}
           alt="Main"
+          width="592"
+          height="800"
+          loading="lazy"
+          decoding="async"
+          sizes="50vw"
         />
       </div>
       <div className="thumbnails__wrapper">
@@ -31,6 +36,10 @@ export const Images = ({ productData, currentImage }: ImagesPropsTypes) => {
                 }`}
                 src={thumbnail.image_url}
                 alt={`Thumbnail # ${idx + 1}`}
+                loading="lazy"
+                width="160"
+                height="190"
+                decoding="async"
               />
             </div>
           ))}
