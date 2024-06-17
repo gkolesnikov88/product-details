@@ -10,9 +10,8 @@
 
 .quantity-control__wrapper {
     display: flex;
-    gap: 37px;
-
-    padding: 8px;
+    align-items: center;
+    gap: 25px;    
 
     /* Input field, Form, Text area/background */
     background: #FAFAFA;
@@ -26,6 +25,16 @@
 }
 
 .control-btn {
+    padding: 3px 11px;
     border: none;
     background: none;
+}
+
+.control-btn:hover {
+    background: #E6E6E6;
+}
+
+.control-btn:focus {
+    background: #E6E6E6;
+    outline: none;
 }
