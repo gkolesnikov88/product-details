@@ -14,9 +14,21 @@
 }
 
 .available-sizes__buttons__button {
+    background: none;
     padding: 12px 20px;
     border: 1px solid #E6E6E6;    
     border-radius: 4px;
+}
+
+.available-sizes__buttons__button:hover {
+    /* Background/primary-hover */
+    background: #FAFAFA;
+}
+
+.available-sizes__buttons__button:focus {
+    /* Background/primary-hover */
+    background: #FAFAFA;
+    outline: none;
 }
 
 .button_active {
