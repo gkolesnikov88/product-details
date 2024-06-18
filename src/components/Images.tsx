@@ -1,12 +1,16 @@
+import { useState } from "react";
 import { ProductDetailsType } from "./ProductTypes";
 import "./_images.css"
 
 type ImagesPropsTypes = {
   productData: ProductDetailsType;
-  currentImage: number;
 };
 
-export const Images = ({ productData, currentImage }: ImagesPropsTypes) => {
+export const Images = ({ productData }: ImagesPropsTypes) => {
+  const [currentImage, setCurrentImage] = useState(
+    productData.images?.length ? 0 : -1
+  );
+
   return (
     <div className="images__wrapper">
       <div className="current-image__wrapper">
@@ -14,7 +18,7 @@ export const Images = ({ productData, currentImage }: ImagesPropsTypes) => {
           className="current-image"
           src={`${
             currentImage >= 0
-              ? productData.images?.[currentImage].image_url
+              ? productData.images?.[currentImage + 1].image_url
               : ""
           }`}
           alt="Main"
@@ -29,7 +33,9 @@ export const Images = ({ productData, currentImage }: ImagesPropsTypes) => {
         {productData.images
           ?.filter((_, idx) => idx > 0)
           .map((thumbnail, idx) => (
-            <div className="thumbnails" key={idx}>
+            <button className="thumbnail" key={idx} onClick={() => {
+              setCurrentImage(idx);            
+            }}>
               <img
                 className={`thumbnail__image ${
                   idx === 0 ? "thumbnail__image--active" : ""
@@ -41,7 +47,7 @@ export const Images = ({ productData, currentImage }: ImagesPropsTypes) => {
                 height="190"
                 decoding="async"
               />
-            </div>
+            </button>
           ))}
       </div>
     </div>

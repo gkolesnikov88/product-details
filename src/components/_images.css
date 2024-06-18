@@ -20,6 +20,20 @@
     gap: 16px;
 }
 
+.thumbnail {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.thumbnail:hover {
+    opacity: 0.7;
+}
+
+.thumbnail:focus {
+    opacity: 0.7;
+}
+
 .thumbnail__image {
     width: 160px;
     height: 190px;

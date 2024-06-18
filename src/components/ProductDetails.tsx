@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./_productDetails.css";
 import "./_productContent.css";
 import { ProductDetailsType } from "./ProductTypes";
@@ -39,14 +39,10 @@ const ProductContent = ({ productData }: ProductContentPropTypes) => {
 };
 
 export const ProductDetails = ({ productData }: ProductDetailsProps) => {
-  const [currentImage, setCurrentImage] = useState(
-    productData.images?.length ? 0 : -1
-  );
-
   return (
     <>
       <section className="product-details">
-        <Images productData={productData} currentImage={currentImage} />
+        <Images productData={productData}/>
         <ProductContent productData={productData} />
       </section>
     </>
