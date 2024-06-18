@@ -11,7 +11,6 @@
 .quantity-control__wrapper {
     display: flex;
     align-items: center;
-    gap: 25px;    
 
     /* Input field, Form, Text area/background */
     background: #FAFAFA;
@@ -22,6 +21,60 @@
     max-width: fit-content;
 
     color: var(--text-secondary-color);
+}
+
+.quantity-control__amount {
+    background: none;
+    border: none;
+    outline: none;
+    width: 49px;
+    text-align: center;
+}
+
+.quantity-control__amount:focus {
+    background: #E6E6E6;
+}
+
+.btn-insufficient-stock{ 
+    position: relative;
+}
+
+.btn-insufficient-stock:hover .control-btn::before {
+    content: "Insufficient stock";
+    text-wrap: nowrap;
+
+    position: absolute;
+    padding: 8px 12px;
+
+    /* Background/primary-inverted */
+    background: #0A0A0A;
+    border-radius: 8px;
+
+    bottom: 34px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+
+    /* Text/primary-invert */
+    color: #FFFFFF;
+}
+
+.btn-insufficient-stock:hover .control-btn::after {
+    content: "";
+
+    position: absolute;
+    width: 10px;
+    height: 10px;
+
+    /* Background/primary-inverted */
+    background: #0A0A0A;
+
+    bottom: 29px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
 }
 
 .control-btn {

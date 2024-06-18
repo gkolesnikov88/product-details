@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./_productDetails.css";
 import "./_productContent.css";
 import { ProductDetailsType } from "./ProductTypes";
@@ -19,6 +19,8 @@ type ProductContentPropTypes = {
 };
 
 const ProductContent = ({ productData }: ProductContentPropTypes) => {
+  const availableAmount = productData.inventory?.[0].stock || 0;
+  
   return (
     <div className="product__content product">
       <h1 className="product__name text-5xl">{productData.name}</h1>
@@ -29,7 +31,7 @@ const ProductContent = ({ productData }: ProductContentPropTypes) => {
       </p>
       <AvailableColors colors={productData.colors} />
       <AvailableSizes sizes={productData.sizes} />
-      <QuantityToAdd />
+      <QuantityToAdd availableAmount={availableAmount}/>
       <button disabled={false} className="add-to-cart text-lg">Add to Cart</button>
       <ProductInfo
         info={productData.info}
