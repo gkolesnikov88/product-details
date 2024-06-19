@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import {
   RiCheckboxBlankCircleFill,
   RiCheckboxCircleFill
@@ -7,9 +7,11 @@ import "./_availableColors.css";
 
 type AvailableColorsPropTypes = {
   colors: string[] | null | undefined;
+  selectedColor?: string;
+  setSelectedColor: Dispatch<SetStateAction<string | undefined>>
 };
 
-const AvailableColors = ({ colors = [] }: AvailableColorsPropTypes) => {
+const AvailableColors = ({ colors = [], selectedColor, setSelectedColor }: AvailableColorsPropTypes) => {
   return (
     <div className="available-colors__wrapper">
       <p className="available-colors__text text-sm">Available Colors</p>
@@ -17,8 +19,14 @@ const AvailableColors = ({ colors = [] }: AvailableColorsPropTypes) => {
         {colors &&
           colors.map((color, idx) => {
             return (
-              <button key={idx} className="color-circles__button">
-                {idx === 0 ? (
+              <button
+                key={idx}
+                className="color-circles__button"
+                onClick={() => {
+                  setSelectedColor(color)
+                }}
+              >
+                {(selectedColor ? color === selectedColor : idx === 0) ? (
                   <RiCheckboxCircleFill
                     size={38}
                     color={color}

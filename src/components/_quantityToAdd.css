@@ -23,6 +23,11 @@
     color: var(--text-secondary-color);
 }
 
+.quantity-control__wrapper button[disabled] {
+    color: var(--text-disabled-color);
+    cursor: not-allowed;
+}
+
 .quantity-control__amount {
     background: none;
     border: none;
@@ -33,6 +38,19 @@
 
 .quantity-control__amount:focus {
     background: #E6E6E6;
+}
+
+/* Remove standart number input arrows */
+/* Firefox */
+.quantity-control__amount {
+    -moz-appearance: textfield;
+}
+  
+/* Chrome, Safari, Edge, Opera */
+.quantity-control__amount::-webkit-outer-spin-button,
+.quantity-control__amount::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .btn-insufficient-stock{ 

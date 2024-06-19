@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import "./_quantityToAdd.css";
 
 type QuantityToAddPropTypes = {
   availableAmount: number;
+  amount: number;
+  setAmount: Dispatch<SetStateAction<number>>;
 };
 
-const QuantityToAdd = ({ availableAmount }: QuantityToAddPropTypes) => {
-  const [amount, setAmount] = useState(0);
+const QuantityToAdd = ({ availableAmount, amount, setAmount}: QuantityToAddPropTypes) => {  
   if (amount > availableAmount) {
     setAmount(availableAmount);
   }
@@ -18,6 +19,7 @@ const QuantityToAdd = ({ availableAmount }: QuantityToAddPropTypes) => {
       <div className="quantity-control__container">
         <div className="quantity-control__wrapper">
           <button
+            disabled={amount === 0}
             className="quantity-control__minus control-btn text-xl"
             onClick={() => {
               if (amount !== 0) {
@@ -30,11 +32,14 @@ const QuantityToAdd = ({ availableAmount }: QuantityToAddPropTypes) => {
           <input
             value={amount}
             className="quantity-control__amount text-xl"
-            max={availableAmount}
+            min={0}
+            max={availableAmount}            
             onChange={e => setAmount(+e.target.value)}
+            type="number"
           />
           <div className={insufficientStock ? 'btn-insufficient-stock' : ''}>
             <button
+              disabled={availableAmount === amount}
               className="quantity-control__plus control-btn text-xl"
               onClick={() => {
                 if (amount < availableAmount) {
