@@ -38,7 +38,7 @@ export const Images = ({ productData }: ImagesPropsTypes) => {
             }}>
               <img
                 className={`thumbnail__image ${
-                  idx === 0 ? "thumbnail__image--active" : ""
+                  idx === currentImage ? "thumbnail__image--active" : ""
                 }`}
                 src={thumbnail.image_url}
                 alt={`Thumbnail # ${idx + 1}`}
