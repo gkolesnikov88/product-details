@@ -42,7 +42,7 @@ export const Images = ({ productData }: ImagesPropsTypes) => {
                 }`}
                 src={thumbnail.image_url}
                 alt={`Thumbnail # ${idx + 1}`}
-                loading="lazy"
+                // loading="lazy"
                 width="160"
                 height="190"
                 decoding="async"

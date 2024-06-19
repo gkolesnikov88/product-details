@@ -21,7 +21,7 @@ type ProductContentPropTypes = {
 const ProductContent = ({ productData }: ProductContentPropTypes) => {
   const [selectedColor, setSelectedColor] = useState(productData.colors?.[0]);
   const [selectedSize, setSelectedSize] = useState(productData.sizes?.[0]);
-  const [amount, setAmount] = useState(88);
+  const [amount, setAmount] = useState(1);
 
   const availableAmount =
     productData.inventory?.find(

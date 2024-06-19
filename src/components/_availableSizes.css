@@ -17,7 +17,11 @@
     background: none;
     padding: 12px 20px;
     border: 1px solid #E6E6E6;    
-    border-radius: 4px;
+    border-radius: 4px;  
+
+    /* Text/primary */
+    color: #171717;
+    text-transform: uppercase;
 }
 
 .available-sizes__buttons__button:hover {

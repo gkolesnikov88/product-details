@@ -21,7 +21,7 @@ const AvailableSizes = ({
             return (
               <button
                 key={idx}
-                className={`available-sizes__buttons__button ${
+                className={`available-sizes__buttons__button text-base ${
                   (selectedSize ? size === selectedSize : idx === 0) ? "button_active" : ""
                 }`}
                 onClick={() => {
