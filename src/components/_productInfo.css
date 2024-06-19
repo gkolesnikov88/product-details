@@ -47,6 +47,14 @@
 
 .product-info__list {
     padding-left: 17px;
+    overflow: hidden;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.product-info__list.collapsed {
+    height: 0 !important;
+    opacity: 0;
 }
 
 .product-info__list__item {
