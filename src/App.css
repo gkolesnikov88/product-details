@@ -23,3 +23,9 @@
 
   padding: 96px;
 }
+
+@media screen and (max-width: 768px) {
+  .content-wrapper {
+    padding: 64px 16px;
+  }
+}

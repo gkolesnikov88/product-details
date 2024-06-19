@@ -8,6 +8,12 @@
     margin-right: auto;
 }
 
+@media screen and (max-width: 768px) {
+    .product-details {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+}
+
 .product__description {
     color: var(--text-secondary-color);
 }
